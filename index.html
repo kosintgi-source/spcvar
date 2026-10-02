@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>แบบทดสอบวิชา Statistical Process Control (SPC)</title>
+  <style>
+    * { box-sizing:border-box; }
+    html, body { margin:0; min-height:100%; background:#edf3fa; }
+    #rcaApp { display:block; width:100%; min-height:100vh; border:0; background:#edf3fa; }
+  </style>
+</head>
+<body>
+  <!-- เปลี่ยน YOUR_WEB_APP_URL เป็น URL ที่ลงท้ายด้วย /exec จาก Deploy ของ Apps Script -->
+  <iframe
+    id="rcaApp"
+    src="https://script.google.com/macros/s/AKfycbx6gYzDctXX7SEagXx8AvZ2zWCMnnhRnMC-as0SbAk6zX6dxVpoH43zb1cuPE15QkZxJQ/exec"
+    title="แบบทดสอบวิชา Statistical Process Control (SPC)"
+    loading="eager"
+    allow="clipboard-write"
+    referrerpolicy="strict-origin-when-cross-origin">
+  </iframe>
+  <script>
+    const frame = document.getElementById('rcaApp');
+    window.addEventListener('message', event => {
+      const data = event.data || {};
+      if (data.type !== 'RCA_IFRAME_HEIGHT') return;
+      const height = Number(data.height);
+      if (Number.isFinite(height) && height >= 320) frame.style.height = `${height}px`;
+    });
+  </script>
+</body>
+</html>
